@@ -1,0 +1,70 @@
+
+		
+		#Basic Spring Boot Config for Oracle
+
+#spring.datasource.url= jdbc:oracle:thin:@127.0.0.1:1521:eps
+#localhost
+#url DB prod 
+#spring.datasource.url=jdbc:oracle:thin:@10.71.21.7:1521/epsdb
+#spring.datasource.url=jdbc:oracle:thin:@10.71.21.2:1521/epsdb1
+
+#epsquery
+server.port=19443
+spring.datasource.url= jdbc:oracle:thin:@192.168.21.134:1521:eps
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+spring.datasource.username=eps_acs
+#spring.datasource.username=ENC(5DIN3cu1iu49NC5XehvkCj13df/Y+xDR)
+spring.datasource.password=eps00001
+#spring.datasource.password=ENC(5DIN3cu1iu49NC5XehvkCj13df/Y+xDR)
+
+jasypt.encryptor.iv-generator-classname=org.jasypt.iv.NoIvGenerator
+jasypt.encryptor.algorithm=PBEWithMD5AndDES
+jasypt.encryptor.password=GCBKeyPassword
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+
+#hibernate config
+#spring.jpa.database-platform=org.hibernate.dialect.OracleDialect
+spring.jpa.database-platform=org.hibernate.dialect.Oracle10gDialect
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.default_schema=eps
+
+corePoolSize=8
+maxPoolSize=12
+queueCapacity=100
+#usernameSms=G-MONEY
+#passwordSms=gmoney_pss_123
+
+usernameSms=GCBCARDS
+passwordSms=GCBEPS$M$G@T3W@Y
+
+
+reqUrlSms=Http://192.168.16.9:14000/cgi-bin/sendsms?
+
+#reqUrlSms=https://deywuro.com/api/sms
+
+
+#reqUrlSmsWirepick=https://api.wirepick.com/httpsms/send
+
+reqUrlSmsWirepick=Http://192.168.16.9:14000/cgi-bin/sendsms?
+
+#?username= &password= &source= &destination=&message=
+clientWirePick=Secureproject
+passwordWirpick=3dsec2020*
+
+##################################### 
+username_eps_sms=halima@GCB
+password_eps_sms=GCBsms2020
+
+
+
+#FIXED DELAY WITH MILLISECONDS
+fixedDelayScheduel=3000
+
+
+###############################Monitoring Data###############
+wildflyName=wildfly_email_sms
+instanceName=SMS Application
+ipAdress=10.71.22.4
+
+

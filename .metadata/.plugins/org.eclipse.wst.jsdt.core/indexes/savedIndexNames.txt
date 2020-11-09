@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\BITS\APPSMS\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2601273397.index
+1508559582.index
+2599543808.index
+2257508513.index
+1235469052.index
+3645258060.index
