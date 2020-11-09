@@ -1,31 +1,16 @@
 package ma.bits.demo.metier;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.domain.Example;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import com.google.gson.Gson;
-import lombok.extern.java.Log;
 import lombok.extern.log4j.Log4j2;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-//import com.google.gson.Gson;
-
-
-import java.util.List;
-import java.util.Optional;
-import java.util.concurrent.CompletableFuture;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
-
 import ma.bits.demo.dao.EpsSmsLogRepository;
 import ma.bits.demo.entities.EpsSmsLog;
-import ma.bits.demo.models.SecurityConstants;
 import ma.bits.demo.models.SendSms;
 import ma.bits.demo.models.SmsCoreRequest;
 import ma.bits.demo.models.SmsResponse;
@@ -37,7 +22,8 @@ public class SmsMetier {
 	
    @Async
 	public Integer sendAsysnchronusSms(EpsSmsLog smsLog,SmsConfigData config,EpsSmsLogRepository smsRepository){
-	   log.info("*********Start sendAsysnchronusSms*********");
+	   log.info("*********Start sendAsysnchronusSms*********"); //siham
+	   
 		int returnInteger=-1;
 		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy h:mm:ss.SSS");
 		//System.out.println(formattedDate);
@@ -129,7 +115,7 @@ public class SmsMetier {
 	  //  reqUrlSms="https://deywuro.com/api/sms";
 		 SmsCoreRequest reqSms=new SmsCoreRequest(config.getUsernameSms(),config.getPasswordSms(),"GCB BANK",smsLog.getMsisdn(), smsLog.getSmsText());		   
 		
-		 log.info("Start Call UNPONTU SMS Service ");
+		 log.info("Start Call callSmsApi ");
 		 //Message To send :"+reqSms.getMessage());
 		 log.info("Message To send :"+reqSms.getMessage().replace("\n", "\\n")); 
 		// reqSms.setMessage(reqSms.getMessage().replace("\n", "\\n"));

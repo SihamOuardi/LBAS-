@@ -1,7 +1,5 @@
 package ma.bits.demo;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -10,29 +8,10 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.SpringVersion;
-import org.springframework.data.domain.Example;
-import org.springframework.scheduling.annotation.Scheduled;
 
 import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 //import com.bits.Acpg1Application;
-import com.zaxxer.hikari.HikariConfig;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Properties;
-import java.util.concurrent.CompletableFuture;
-
-import ma.bits.demo.dao.EpsSmsLogRepository;
-import ma.bits.demo.entities.EpsSmsLog;
-import ma.bits.demo.entities.EpsSmsLogId;
-import ma.bits.demo.metier.SmsConfigData;
-import ma.bits.demo.metier.SmsMetier;
-import ma.bits.demo.models.WirepickSmsResponse;
-import ma.bits.demo.service.ValidationResult;
 
 @ComponentScan
 @EnableAutoConfiguration
